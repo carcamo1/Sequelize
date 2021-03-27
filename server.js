@@ -2,14 +2,14 @@ import express from 'express';
 import db from './database/initializeDB.js';
 import apiRoutes from './routes/apiRoutes.js';
 
-const app = express();
+const app = open();
 
 const PORT = process.env.PORT || 3000;
-const staticFolder = 'public';
+const folder = 'public';
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(staticFolder));
+app.use(open.urlencoded({ extended: true }));
+app.use(open.json());
+app.use(open.static(folder));
 
 app.use('/api', apiRoutes); 
 
@@ -26,4 +26,3 @@ async function bootServer() {
 }
 
 bootServer();
-
