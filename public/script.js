@@ -5,9 +5,9 @@
   async function dataHandler(){
    
     //getting data from the api 
-    const request = await fetch('/api/dining');
-    const api_data = await request.json();
-    const data = api_data.data;
+    const wait = await fetch('/api/dining');
+    const data_api = await wait.json();
+    const data = data_api.data;
     const table = document.querySelector('.table');
 
     console.log(data);
